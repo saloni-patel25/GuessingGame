@@ -1,0 +1,24 @@
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        // mini project
+        Scanner sc = new Scanner(System.in);
+        int myNumber = ((int) (Math.random() * 100));
+        int number=0;
+        do {
+            System.out.println("Guess my number(1-100): ");
+            number = sc.nextInt();
+            if (number == myNumber) {
+                System.out.println("WOOHOO .. CORRECT NUMBER!!");
+                break;
+            } else if (number > myNumber) {
+                System.out.println("ur number is too large");
+            } else {
+                System.out.println("ur number is too small");
+            }
+        }
+        while (number >= 0);
+        System.out.print("My number was: ");
+        System.out.println(myNumber);
+    }
+}
